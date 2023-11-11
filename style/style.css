@@ -5,10 +5,13 @@
     --color-prymary-light: #fAF4EA;
     --color-brand-light: #CFCFBC;
     --color-secondary-dark: #A18268;
+
 }
 
 /* Base*/
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
@@ -30,6 +33,10 @@ h5,
 h6,
 p {
     margin-top: 0;
+}
+
+a {
+    display: inline-block;
 }
 
 address {
@@ -200,6 +207,7 @@ ul {
 }
 
 /*chefs-selection*/
+
 .chef-title {
     margin-bottom: 16px;
     font-size: 40px;
@@ -209,6 +217,30 @@ ul {
 .chefs-title {
     margin: 0 auto 80px;
     max-width: 540px;
+}
+
+.chef-text p {
+    margin-bottom: 24px;
+    ;
+}
+
+.chef-text p:last-child {
+    margin-bottom: 0;
+    ;
+}
+
+.chef-card {
+    display: flex;
+    gap: 30px;
+}
+
+.chefs-list {
+    display: flex;
+    gap: 30px;
+}
+
+.chefs-item {
+    flex-basis: calc(100% - 30px / 2);
 }
 
 .chef-photo {
@@ -231,6 +263,12 @@ ul {
 }
 
 /*format selection*/
+.formats-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
 .formats-item {
     flex-basis: calc((100% - 40px)/3);
 
@@ -265,22 +303,25 @@ ul {
     font-size: 14px;
     font-weight: 300;
 }
+
 /*carousel*/
-.carousel-button{
-width: 44px;
-height: 44px;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 0;
-fill: var(--color-prymary-dark);
-background-color:transparent;
-border-radius: 50%;
-border: 1px solid var(--color-prymary-dark);
-cursor: pointer;
+.carousel-button {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+    fill: var(--color-prymary-dark);
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--color-prymary-dark);
+    cursor: pointer;
 }
-.carousel-button:hover{
-    background-color: var(--color-prymary-dark);   
+
+.carousel-button:hover {
+    background-color: var(--color-prymary-dark);
     fill: var(--color-prymary-light);
 }
 
@@ -289,7 +330,48 @@ cursor: pointer;
     margin-bottom: 16px;
 }
 
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
+
+.contacts-section {
+    padding-bottom: 96px;
+}
+
 /*Footer*/
+.footer {
+    padding: 23px 0;
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+
+.footer-menu,
+.footer-logo {
+    flex-grow: 1;
+}
+
+.address-list,
+.address-info {
+    flex-grow: 1;
+}
+
 .address-link {
     color: var(--color-prymary-light);
     font-size: 16px;
@@ -300,12 +382,15 @@ cursor: pointer;
 .address-link:hover {
     color: var(--color-brand-normal);
 }
-.address-icon{
+
+.address-icon {
     fill: var(--color-prymary-light);
 
 }
+
 .address-copyright {
     font-style: 14px;
+    color: var(--color-secondary-dark);
 }
 
 .footer {
