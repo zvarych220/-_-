@@ -216,7 +216,7 @@ ul {
 
 .chefs-title {
     margin: 0 auto 80px;
-    max-width: 540px;
+    position: relative;
 }
 
 .chef-text p {
@@ -249,17 +249,21 @@ ul {
 }
 
 .chefs-title::before {
-    display: block;
-    width: 352px;
-    border: 2px solid var(--color-brand-light);
-    content: '';
+    left: 0;
 }
 
 .chefs-title::after {
+    right: 0;
+}
+
+.chefs-title::after,
+.chefs-title::before {
+    bottom: 24px;
     display: block;
     width: 352px;
     border: 2px solid var(--color-brand-light);
     content: '';
+    position: absolute;
 }
 
 /*format selection*/
@@ -348,6 +352,12 @@ ul {
 /*Footer*/
 .footer {
     padding: 23px 0;
+    position: relative;
+    background-image: url('../img/footer.png');
+    background-color: var(--color-prymary-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .footer-container {
@@ -393,10 +403,57 @@ ul {
     color: var(--color-secondary-dark);
 }
 
-.footer {
-    background-image: url('../img/footer.png');
-    background-color: var(--color-prymary-dark);
+
+.footer::before {
+    width: 180px;
+    height: 120px;
+    left: 0;
+    background-image: url('../img/bread-1.png');
+}
+
+.footer::after {
+    width: 380px;
+    height: 190px;
+    right: 0;
+    background-image: url('../img/bread-2.png');
+}
+
+.footer::before,
+.footer::after {
+    position: absolute;
+    bottom: 0;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    content: '';
+}
+
+/*Modal*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    position: relative;
+    width: 880px;
+    height: 880px;
+    background-color: var( --color-prymary-light);
+    border-radius: 32px;
+
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: collapse;
+    pointer-events: none;
+}
+.modal-btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }
