@@ -17,17 +17,17 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="container">
             <div class="header-conteiner">
                 <nav class="header-nav">
                     <a href="#"></a>
                     <img src="./img/logo.svg" alt="логотип сучасної пекарні">
                     <ul class="header-menu">
-                        <li><a class="linl" href="#traditions-section">Наші традиції</a></li>
-                        <li><a class="linl" href="#cookers-section">Шеф-кухарі</a></li>
-                        <li><a class="linl" href="#formats-section">Формати</a></li>
-                        <li><a class="linl" href="#contacts-section">Контакти</a></li>
+                        <li><a class="link" href="#traditions-section">Наші традиції</a></li>
+                        <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
+                        <li><a class="link" href="#formats-section">Формати</a></li>
+                        <li><a class="link" href="#contacts-section">Контакти</a></li>
                     </ul>
                 </nav>
                 <button class="button modal-btn-open" type="button">Замовити дзвінок</button>
@@ -71,7 +71,8 @@
 
         <section class="section" id="chefs-section">
             <div class="container">
-                <h2 class="chefs-title section-title centered">Наші найкращі <br> <span class="accent">шеф-кухарі</span></h2>
+                <h2 class="chefs-title section-title centered">Наші найкращі <br> <span class="accent">шеф-кухарі</span>
+                </h2>
                 <ul class="chefs-list">
                     <li class="chefs-item">
                         <article class="chef-card">
@@ -158,7 +159,7 @@
                             </article>
                         </li>
                     </ul>
-                    <button class="carousel-button" type="button">
+                    <button class="carousel-button next" type="button">
                         <svg width="16" height="16">
                             <use xlink:href="./img/symbol-defs.svg#icon-Arrow"></use>
                         </svg>
@@ -195,10 +196,10 @@
                         </a>
                     </div>
                     <ul class="footer-menu">
-                        <li><a class="linl" href="#">Наші традиції</a></li>
-                        <li><a class="linl" href="#">Шеф-кухарі</a></li>
-                        <li><a class="linl" href="#">Формати</a></li>
-                        <li><a class="linl" href="#">Контакти</a></li>
+                        <li><a class="link" href="#">Наші традиції</a></li>
+                        <li><a class="link" href="#">Шеф-кухарі</a></li>
+                        <li><a class="link" href="#">Формати</a></li>
+                        <li><a class="link" href="#">Контакти</a></li>
                     </ul>
                 </nav>
                 <address class="footer-address">
@@ -232,12 +233,13 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden">
         <div class="modal">
             <button class="modal-btn-close" type="button">Close</button>
         </div>
     </div>
-   
+
+
 
     <script src="/js/modal.js"></script>
 </body>
